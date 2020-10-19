@@ -1,0 +1,130 @@
+#page-orphanage {
+    display: flex;
+
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/*details*/
+.orphanage-details {
+    width: 70rem;
+    margin: 6.4rem auto; /*esse auto só ativa (centralizando esse item) se o main tiver a propriedade flex:1 como coloquei mais acima*/
+    background: white;
+    border: 1px solid #d3e2e5;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.orphanage-details > img { /*esse seletor pega apenas a img que é filha da orphanage-details, imgs dentro de divs não serão afetadas*/
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.images {
+    display: grid; /*colunas e linhas. grade. dã*/
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 1.6rem;
+    margin: 1.6rem 4rem;
+}
+
+.images button {
+    border: 0;
+    background: none;
+    height: 8.8rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    overflow: hidden;
+    opacity: 0.6;
+    transition: opacity 200ms;
+}
+
+.images button:hover,
+.images button.active {
+    opacity: 1;
+}
+
+.images button img {
+    width: 100%;
+    height: 8.8rem;
+    object-fit: cover ;
+}
+
+.orphanage-details-content {
+    padding: 8rem;
+    
+}
+
+.orphanage-details-content h1 {
+    color: #4d6f80;
+    font-size: 5.4rem;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+
+.orphanage-details-content p {
+    line-height: 1.6;
+    color: #5c8599;
+    margin-top: 2.4rem;
+}
+
+.orphanage-details-content hr {
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background: #d3e2e6;
+
+    margin: 6.4rem 0;
+}
+
+.orphanage-details-content h2 {
+    font-size: 3.6rem;
+    line-height: 1.5;
+    color: #4d6f80;
+}
+
+.open-details {
+    margin-top: 2.4rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr; /*equivalente ao repeat(2, 1fr)*/
+    column-gap: 2rem;
+}
+
+.open-details div {
+    padding: 3.2rem 2.4rem;
+        
+}
+
+.open-details .hour {
+    background: linear-gradient(149.97deg, #E6F7FB 8.13%, #FFFFFF 92.67%);
+    border: 1px solid #B3DAE2;
+    border-radius: 20px;
+}
+
+.open-details .hour p {
+    color: #5C8599;
+}
+
+.open-details .open_on_weekends.opened {
+    background: linear-gradient(154.16deg, #EDFFF6 7.85%, #FFFFFF 91.03%);
+    border: 1px solid #A1E9C5;
+    border-radius: 20px;
+}
+
+.open-details .open_on_weekends.opened p {
+    color: #37C77F;
+}
+
+.open-details .open_on_weekends.closed {
+    background: linear-gradient(154.16deg, #fcf0f4 7.85%, #FFFFFF 91.03%);
+    border: 1px solid #ffbcd4;
+    border-radius: 20px;
+}
+
+.open-details .open_on_weekends.closed p {
+    color: #ff669b;
+}

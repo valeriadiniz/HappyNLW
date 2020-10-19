@@ -1,0 +1,33 @@
+* {
+  /*remove margin e padding de todos os elementos*/
+  margin: 0;
+  padding: 0;
+
+  /*modifica o comportamento padrão do cálculo do tamanho do box
+  por padrão content-box, onde o padding não faz parte do cálculo do
+  tamanho do box. mudando para border-box, tanto o conteúdo como o 
+  padding farão parte do cálculo do tamanho da caixa*/
+  box-sizing: border-box;
+}
+
+:root {
+  /*100% é 16px, padrão do navegador. 62.5% será 10px*/
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh; /*ocupa 100% da altura da viewport*/
+
+  color: white; /*todos os textos dentro de body terão a cor branca*/
+
+  background: #ebf2f5;
+}
+
+body,
+input,
+button,
+textarea {
+  /*weight  size/line-height font-family*/
+  font: 400 1.8rem/1 "Nunito", sans-serif;
+  /*1.8 rem é o equivalente a 1.8 x o font-size do :root*/
+}
